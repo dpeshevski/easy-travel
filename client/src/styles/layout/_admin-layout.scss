@@ -1,0 +1,50 @@
+.app-layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows: 60px 1fr 60px;
+  height: 100vh;
+
+  .main-content {
+    grid-area: content;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: $background-color;
+    text-align: center;
+  }
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-areas: "sidebar content";
+  grid-template-columns: 250px 1fr;
+  height: calc(100vh - 120px);
+  
+  .admin-sidebar {
+    grid-area: sidebar;
+    background-color: $secondary-color;
+    color: white;
+    padding: $padding-base;
+    overflow-y: auto;
+  }
+
+  .main-content {
+    grid-area: content;
+    padding: 2rem;
+    background-color: $background-color;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    grid-template-areas: "content";
+    grid-template-columns: 1fr;
+
+    .admin-sidebar {
+      display: none;
+    }
+  }
+}

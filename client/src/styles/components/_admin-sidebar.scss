@@ -1,0 +1,26 @@
+.admin-sidebar {
+  background-color: $secondary-color;
+  color: white;
+  padding: $padding-base;
+  height: 100%;
+  overflow-y: auto;
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin-bottom: $padding-base;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

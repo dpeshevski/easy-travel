@@ -1,0 +1,7 @@
+footer, .app-footer {
+  grid-area: footer;
+  background-color: $dark-gray;
+  color: white;
+  height: 60px;
+  @include flex-center()
+}

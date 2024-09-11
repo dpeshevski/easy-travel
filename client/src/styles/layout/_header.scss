@@ -1,0 +1,25 @@
+header, .app-header {
+  grid-area: header;
+  background-color: $dark-gray;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-base;
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    li a {
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+        color: lighten($primary-color, 10%);
+      }
+    }
+  }
+}

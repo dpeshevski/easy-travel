@@ -1,0 +1,25 @@
+.app-layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows: 60px 1fr 60px;
+  height: 100vh;
+
+  .main-content {
+    grid-area: content;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: $background-color;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    .main-content {
+      padding: 1rem;
+    }
+  }
+}

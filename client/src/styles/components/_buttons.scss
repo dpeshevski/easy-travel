@@ -1,0 +1,19 @@
+.button {
+  @include button($primary-color);
+
+  &.secondary {
+    @include button($secondary-color);
+  }
+
+  &.danger {
+    @include button($danger-color);
+  }
+
+  &.small {
+    font-size: 0.75rem;
+  }
+
+  &.large {
+    font-size: 1.25rem;
+  }
+}
